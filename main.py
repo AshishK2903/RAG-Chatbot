@@ -34,10 +34,14 @@ if user_input:
 
     CONFIG = {'configurable': {'thread_id': 'thread-1'}}
 
-    response = chatbot.invoke({"messages": [HumanMessage(content=user_input)]}, config=CONFIG)
+    with st.chat_message('assistant'):
+        ai_message = st.write_stream(
+            message_chunk.content for message_chunk, metadata in chatbot.stream(
+                {"messages": [HumanMessage(content=user_input)]},
+                config = CONFIG,
+                stream_mode = 'messages'
+            )
+        )
 
     # Add AI message to message history
-    ai_message = response['messages'][-1].content
     st.session_state['message_history'].append({"role": "assistant", "content": ai_message})
-    with st.chat_message('assistant'):
-        st.text(ai_message)
