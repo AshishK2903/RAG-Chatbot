@@ -9,6 +9,7 @@ A conversational AI chatbot application built with **LangGraph** for graph-based
 - **OpenAI Integration**: Uses OpenAI's advanced language models
 - **Conversation History**: Maintains message history throughout each session
 - **Stateful Processing**: In-memory checkpointing for conversation persistence
+- **Streaming Responses**: Displays the model's reply token by token as it is generated, instead of waiting for the full response
 
 
 ## 📁 Project Structure
