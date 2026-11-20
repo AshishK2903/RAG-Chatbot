@@ -4,3 +4,4 @@ langchain_openai==1.1.7
 dotenv==0.9.9
 streamlit==1.53.1
 langgraph_checkpoint_sqlite==3.0.3
+langchain_community==0.4.2
