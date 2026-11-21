@@ -12,6 +12,7 @@ A conversational AI chatbot application built with **LangGraph** for graph-based
 - **Streaming Responses**: Displays the model's reply token by token as it is generated, instead of waiting for the full response
 - **Multiple Conversations**: Start a new conversation or resume existing conversations.
 - **Tool Calling**: The chatbot can use tools when needed: web search (DuckDuckGo), a calculator for basic arithmetic, and current weather lookup for any city.
+- **Document Q&A (RAG)**: Upload a PDF to a conversation and ask questions grounded in its content. The PDF is split into chunks, indexed in a FAISS vector store, and the most relevant chunks are retrieved to answer your questions.
 
 
 ## 📁 Project Structure
